@@ -5,8 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     // Variables
-    float xAngle = 1f;
-    float yAngle = 0f;
+    float xAngle = 1.5f;
+    float yAngle = 0.8f;
     float zAngle = 0f;
 
     // Cache
@@ -20,9 +20,9 @@ public class Ball : MonoBehaviour
         ballRigidbody.AddForce(transform.TransformVector(xAngle,yAngle,zAngle) * thrust);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Returns y position of transform
+    public float YPos()
     {
-        
+        return this.transform.position.y;
     }
 }
